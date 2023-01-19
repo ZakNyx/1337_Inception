@@ -1,0 +1,5 @@
+CREATE DATABASE IF NOT EXISTS zihirri_db ;
+CREATE USER IF NOT EXISTS 'zihirri'@'%' IDENTIFIED BY 'zak' ;
+GRANT ALL PRIVILEGES ON zihirri_db.* TO 'zihirri'@'%' ;
+FLUSH PRIVILEGES;
+ALTER USER 'root'@'localhost' IDENTIFIED BY '12345' ;
