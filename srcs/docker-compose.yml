@@ -6,16 +6,16 @@ networks:
 
 volumes:
   wordpress:
-    driver: local
     name: wordpress
+    driver: local
     driver_opts:
       device: /home/zihirri/data/wordpress
       o: bind
 
 
   mariadb:
-    driver: local
     name: mariadb
+    driver: local
     driver_opts:
       device: /home/zihirri/data/mariadb
       o: bind
