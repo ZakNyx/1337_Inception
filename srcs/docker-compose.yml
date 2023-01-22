@@ -35,7 +35,6 @@ services:
       - wordpress:/var/www/html
     restart: always
 
-
   wordpress:
     image: wordpress
     build: ./requirements/wordpress/
@@ -60,4 +59,16 @@ services:
       - inception
     volumes:
       - mariadb:/var/lib/mysql
+    restart: always
+    
+  adminer:
+    image: adminer
+    build: ./requirements/bonus/adminer/
+    container_name: adminer
+    depends_on:
+      - mariadb
+    ports:
+      - "8080:8080"
+    networks:
+      - inception
     restart: always
