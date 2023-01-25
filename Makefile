@@ -47,6 +47,8 @@ fclean : vol
 ps : 
 	@docker ps
 
+cont :
+	@docker exec -it $c /bin/bash
 
 help : 
 	@echo "$(BYellow)make up$(BWhite): to run the docker-compose file"

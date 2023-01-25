@@ -58,6 +58,13 @@ define('LOGGED_IN_SALT',   '-*RWVX=-[|?u}(a]ZjX d2$7w=f)XBCE<tyPjAxHSidy@vB$&L(Y
 define('NONCE_SALT',       '-mEvpdA}4mUkI>F Qz~*W6fc-U|YJM@e+7]^e-mDKd6?OjqwOg:33D.p51MCA#*S');
 
 
+#IP or hostname of the target server. This is ignored when connecting 
+#to Redis using UNIX domain sockets.
+define( 'WP_REDIS_HOST', 'redis');
+#TCP/IP port of the target server. This is ignored when connecting
+#to Redis using UNIX domain sockets.
+define( 'WP_REDIS_PORT', 6379 );
+
 define('WP_CACHE', true);
 
 /**#@-*/

@@ -33,12 +33,17 @@ wp core install --url=$WP_DOMAINE --title=$WP_TITLE --admin_user=$WP_ADMINUSER -
 
 wp user create $WP_USR $WP_USREMAIL --role=author --user_pass=$WP_USRPASS --allow-root
 
+wp plugin install redis-cache --activate --allow-root
+
+wp plugin update --all --allow-root
 
 wp theme install twentytwentytwo --activate --allow-root
 
 sed -i 's/listen = \/run\/php\/php7.3-fpm.sock/listen = 9000/g' /etc/php/7.3/fpm/pool.d/www.conf
 
 mkdir /run/php
+
+wp redis enable --allow-root
 
 
 /usr/sbin/php-fpm7.3 -F
