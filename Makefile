@@ -41,7 +41,7 @@ img:
 	@sudo docker image rm -f nginx mariadb wordpress
 
 fclean : vol
-	@sudo docker image rm -f nginx mariadb wordpress
+	@sudo docker image rm -f nginx mariadb wordpress cadvisor adminer redis ftp website
 
 
 ps : 
@@ -62,4 +62,4 @@ help :
 git: 
 	@git add .
 	@git commit -m "$m"
-	@git push -u origin master 
+	@git push -u origin master
