@@ -58,6 +58,8 @@ help :
 	@echo "$(BYellow)make restart$(BWhite): to restart service containers"
 	@echo "$(BPurple)make logs$(BWhite): to view the output from containers"
 	@echo "$(BPurple)make ls$(BWhite): to list the running compose projects"
+	@echo "$(BPurple)make cont$(BWhite): to enter a specified container ex:make cont c="nginx" "
+	@echo "$(BPurple)make fclean$(BWhite): deletes the images and the volumes"
 
 git: 
 	@git add .
